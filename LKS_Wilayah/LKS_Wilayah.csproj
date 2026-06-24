@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseInitializer.cs" />
     <Compile Include="koneksi.cs" />
     <Compile Include="ManageMeeting.cs">
       <SubType>Form</SubType>

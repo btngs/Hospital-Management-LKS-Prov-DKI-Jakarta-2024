@@ -9,8 +9,9 @@ namespace LKS_Wilayah
 {
     public static class koneksi
     {
-
-        private static string ConnString = @"Data Source=(localdb)\MSSQLLocalDb;Initial Catalog = DESKTOP_XX; Integrated Security = True; TrustServerCertificate=True";
+        public const string DatabaseName = "LKS_Wilayah";
+        private static string ConnString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=" + DatabaseName + @";Integrated Security=True;TrustServerCertificate=True";
+        public static string MasterConnString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;TrustServerCertificate=True";
 
         public static SqlConnection GetConn()
         {

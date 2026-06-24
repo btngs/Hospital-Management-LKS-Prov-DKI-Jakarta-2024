@@ -16,9 +16,8 @@ namespace LKS_Wilayah
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            session.username = "john_doe";
-            session.isLoggedIn = true;
-            Application.Run(new MainForm());
+            DatabaseInitializer.EnsureCreated();
+            Application.Run(new LoginForm());
         }
     }
 }
