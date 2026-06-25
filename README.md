@@ -40,13 +40,13 @@ Connection details are defined in `LKS_Wilayah/koneksi.cs`:
 On startup, the app will:
 
 1. Create the database if it does not exist
-2. Create all required tables
-3. Insert seed data for doctor categories and a default login account
+2. Load and execute `LKS_Wilayah/database_mssql.sql`
+3. Populate the app with the same tables and data from your local SQL Server export
 
 Default login:
 
 - username: `john_doe`
-- password: `password`
+- password: `john_doe`
 
 ## Running the App
 
@@ -60,3 +60,9 @@ Default login:
 - Username and password are checked against the `[user]` table.
 - Passwords are hashed with SHA-512 before comparison.
 - `Program.cs` now starts at `LoginForm`, so the login flow is active.
+
+## Important
+
+- The SQL script is treated as the source of truth for database contents.
+- If you update `database_mssql.sql`, the app will use that version on a fresh install.
+- If the script already created the database on the machine, first-run import will be skipped.
