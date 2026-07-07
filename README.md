@@ -1,6 +1,6 @@
 # LKS_Wilayah
 
-Windows Forms application for managing wilayah-related data, built with C# and .NET Framework 4.7.2.
+Windows Forms application for managing hospital appointment, built with C# and .NET Framework 4.7.2.
 
 ## Features
 
